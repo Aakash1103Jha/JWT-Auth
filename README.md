@@ -14,8 +14,8 @@
 
 ## Flow
 
-_Expect error to be thrown or logged in console in where ever it should be._
+_Expect error to be thrown or logged in console, where ever it should be._
 
 User -> Registers -> Success -> Login -> Provides email and password -> If credentials are correct, JWT is generated and set as a header.
 
-User (after login) visits a PROTECTED route -> `validateJWT` middleware validates the JWT in header using the `jwt.verrify()` function -> user is added to request is token is valid
+User (after login) visits a PROTECTED route -> `validateJWT` middleware validates the JWT in header using the `jwt.verrify()` function -> user is added to request if token is valid
