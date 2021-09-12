@@ -10,7 +10,12 @@ app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`)
 })
 
-const AuthRoute = require("./auth-route")
+const AuthRoute = require("./src/auth-route")
 
 app.use("/auth", AuthRoute)
 app.use("/user", AuthRoute)
+
+app.use("/", async (req, res, next) => {
+	res.send("404 - Page Not Found")
+	next()
+})
